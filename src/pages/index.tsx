@@ -8,7 +8,7 @@ export default function Home() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  if (error && error.message === "No data" && !user) {
+  if (error) {
     return <div>{error.message}</div>;
   }
   return (
