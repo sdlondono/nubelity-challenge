@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Card from "./components/Card";
-import Nav from "./components/Nav";
-import useGetUser from "./hooks/useGetUser";
+import Card from "../components/Card";
+import Nav from "../components/Nav";
+import useGetUser from "../hooks/useGetUser";
 
 export default function Home() {
-  const { user, error, isLoading } = useGetUser();
+  const [user, isLoading, error] = useGetUser();
   if (isLoading) {
     return <div>Loading...</div>;
   }

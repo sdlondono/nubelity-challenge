@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { User } from "../types";
 
-function useGetUser() {
+function useGetUser(): [User, boolean, Error | null] {
   const [user, setUser] = useState<User>({} as User);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -35,7 +35,7 @@ function useGetUser() {
     fetchUser();
   }, []);
 
-  return { user, isLoading, error };
+  return [user, isLoading, error];
 }
 
 export default useGetUser;

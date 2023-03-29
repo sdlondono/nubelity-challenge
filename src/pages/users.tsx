@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Nav from "./components/Nav";
-import User from "./components/User";
-import useGetUsers from "./hooks/useGetUsers";
+import Nav from "../components/Nav";
+import User from "../components/User";
+import useGetUsers from "../hooks/useGetUsers";
 
 export default function Users() {
-  const { users, error, isLoading } = useGetUsers();
+  const [users, isLoading, error] = useGetUsers();
   if (isLoading) {
     return <div>Loading...</div>;
   }

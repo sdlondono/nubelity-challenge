@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { User } from "../types";
 import { formatDate } from "../utils";
 
-function useGetUsers() {
+function useGetUsers(): [User[], boolean, Error | null] {
   const [users, setUsers] = useState<User[]>({} as User[]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -42,7 +42,7 @@ function useGetUsers() {
     fetchUser();
   }, []);
 
-  return { users, isLoading, error };
+  return [users, isLoading, error];
 }
 
 export default useGetUsers;
