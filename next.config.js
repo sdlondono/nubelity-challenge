@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ["randomuser.me"],
   },
+  pageExtensions: [""],
 };
 
 module.exports = nextConfig;
