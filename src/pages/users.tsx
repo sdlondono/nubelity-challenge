@@ -21,13 +21,11 @@ export default function Users() {
       </Head>
       <main className="p-3">
         <Nav />
-        <div className="mt-3 flex flex-col items-center">
-          {users.map((user) => (
-            <div key={user.email}>
-              <User {...user} />
-            </div>
-          ))}
-        </div>
+        {users.map((user) => (
+          <div key={user.email} className="grid place-items-center">
+            <User {...user} />
+          </div>
+        ))}
       </main>
     </>
   );

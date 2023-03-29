@@ -63,51 +63,51 @@ const Card: React.FC<CardProps> = ({
           <Image
             className="rounded-full"
             src={url}
-            height={100}
-            width={100}
+            height={150}
+            width={150}
             alt="User image"
           />
         </div>
         <div className="my-3">
-          <p className="text-sm text-gray-600">{options[selected].label}</p>
-          <h2 className="text-xl">{options[selected].value}</h2>
+          <p className="text-lg text-gray-600">{options[selected].label}</p>
+          <h2 className="text-2xl">{options[selected].value}</h2>
         </div>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-8 justify-center">
           <button
             onClick={() => setSelected("name")}
             className={getClassBySelected("name")}
           >
-            <AiOutlineUser />
+            <AiOutlineUser size={25} />
           </button>
           <button
             onClick={() => setSelected("phone")}
             className={getClassBySelected("phone")}
           >
-            <AiOutlinePhone />
+            <AiOutlinePhone size={25} />
           </button>
           <button
             onClick={() => setSelected("email")}
             className={getClassBySelected("email")}
           >
-            <AiOutlineMail />
+            <AiOutlineMail size={25} />
           </button>
           <button
             onClick={() => setSelected("address")}
             className={getClassBySelected("address")}
           >
-            <AiOutlineContacts />
+            <AiOutlineContacts size={25} />
           </button>
           <button
             onClick={() => setSelected("birthday")}
             className={getClassBySelected("birthday")}
           >
-            <AiOutlineCalendar />
+            <AiOutlineCalendar size={25} />
           </button>
           <button
             onClick={() => setSelected("password")}
             className={getClassBySelected("password")}
           >
-            <AiOutlineLock />
+            <AiOutlineLock size={25} />
           </button>
         </div>
       </div>
