@@ -7,7 +7,3 @@ export type User = {
   birthday: string;
   url: string;
 };
-
-const defaultData = {};
-
-export default defaultData;
